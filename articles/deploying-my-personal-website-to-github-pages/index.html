@@ -62,7 +62,7 @@
 			<span class="glyphicon glyphicon-tag"></span> under: <span class="badge">Programming</span> </p>
           <hr>
           
-          <p>When I first built my personal website I deployed it to Heroku. At that time Heroku was the best option for me because it offered a free tier and it was relatively easy to use. But one thing I did not like about it was that the application dyno--the container that handles all the HTTP traffic to the site-- would go to sleep if my website receives no traffic in a 30-minute period. Consequently the next time someone tries to access the site it will take longer to load as the dyno will need to wake up first. </p>
+          <p>When I first built my personal website I deployed it to Heroku. At that time Heroku was the best option for me because it offered a free tier and it was relatively easy to use. But one thing I did not like about it was that the application dyno&mdash;the container that handles all the HTTP traffic to the site&mdash; would go to sleep if my website receives no traffic in a 30-minute period. Consequently the next time someone tries to access the site it will take longer to load as the dyno will need to wake up first. </p>
 <p>The site is built with <a href="http://docs.getpelican.com/en/3.6.3/">Pelican</a> which is a static site generator written in Python. A static site generator basically takes text written in a plain text markup format such as Markdown and converts it to HTML pages using predefined templates. So, after defining the templates for my website, whenever I need to publish new content such as this article I only need to write raw text in a MarkDown file and Pelican will handle the rest for me. Among other advantages, this approach is easy to use and results in a really fast website that can be easily deployed to GitHub Pages. </p>
 <p>This weekend I decided to move my website from Heroku to GitHub Pages. Here is how I went about it.</p>
 <h2>Deploying the site to GitHub Pages</h2>
@@ -72,10 +72,10 @@
 <p>And third, I issued the command <code>git push git@github.com:joejean/joejean.github.io.git gh-pages:master</code> to push the content of the gh-pages branch to the master branch of the github repo where the site will live. After this the site was live and it could be accessed from http://joejean/github.io but I wanted to use my custom domain name "www.joejean.net".</p>
 <h2>Setting up the custom domain</h2>
 <p>I tried many different approaches while setting up the custom domain, but what follows is the only approach that worked for me. 
-I started by creating a <a href="https://github.com/joejean/joejean.github.io/blob/cname/CNAME">CNAME file</a> with the content <code>www.joejean.net</code> and commit it to a different branch in the same <code>joejean.github.io</code> repository. </p>
-<p>Then I opened the domain name administration page at my domain name registrar and I created two A records which points respectivley to the GitHub IPs <code>192.30.252.153</code> and <code>192.30.252.154</code>. After that, the last step was to create a CNAME record for the subdomain <code>www.joejean.net</code> that points to <code>joejean.github.io</code>. The following screenshot summarize the configurations:
+I started by creating a <a href="https://github.com/joejean/joejean.github.io/blob/cname/CNAME">CNAME file</a> with the content <code>www.joejean.net</code> and commit it to a different branch&mdash;which can have any name&mdash; in the same <code>joejean.github.io</code> repository. Then I merged that branch with the master branch of the <code>joejean.github.io</code> repository. </p>
+<p>Then I opened the domain administration page at my domain name registrar and I created two A records which points respectivley to the GitHub IPs <code>192.30.252.153</code> and <code>192.30.252.154</code>. After that, the last step was to create a CNAME record for the subdomain <code>www.joejean.net</code> that points to <code>joejean.github.io</code>. The following screenshot summarizes the configurations:
 <img src ="http://www.joejean.net/images/dns.png" class="img-responsive img-rounded" /></p>
-<p>So now my site is being served from GitHub pages and load with the same lightning speed no matter when it is accessed. It is important to note that GitHub Pages only work for static sites. </p>
+<p>So now my site is being served from GitHub pages and loads with the same lightning speed no matter when it is accessed. It is important to note that GitHub Pages only work for static sites. </p>
           
           
           <!-- the comment box -->
@@ -86,8 +86,8 @@ I started by creating a <a href="https://github.com/joejean/joejean.github.io/bl
 
 				  <div id="disqus_thread"></div>
 				  <script type="text/javascript">
-					var disqus_identifier = "articles/deploying-my-personal-website-tp-github-pages/";
-					var disqus_url = "http://www.joejean.net/articles/deploying-my-personal-website-tp-github-pages/";
+					var disqus_identifier = "articles/deploying-my-personal-website-to-github-pages/";
+					var disqus_url = "http://www.joejean.net/articles/deploying-my-personal-website-to-github-pages/";
 					(function() {
 					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 					dsq.src = 'http://joejeanblog.disqus.com/embed.js';
@@ -131,18 +131,18 @@ I started by creating a <a href="https://github.com/joejean/joejean.github.io/bl
 				<ul class="list-unstyled">
 					
 						<li class="tag-1"><a href="http://www.joejean.net/tag/api/">api</a></li>
-						<li class="tag-1"><a href="http://www.joejean.net/tag/mashups/">mashups</a></li>
-						<li class="tag-4"><a href="http://www.joejean.net/tag/books/">books</a></li>
-						<li class="tag-4"><a href="http://www.joejean.net/tag/githubpages/">githubpages</a></li>
-						<li class="tag-1"><a href="http://www.joejean.net/tag/javascript/">javascript</a></li>
-						<li class="tag-4"><a href="http://www.joejean.net/tag/information/">information</a></li>
-						<li class="tag-4"><a href="http://www.joejean.net/tag/reading/">reading</a></li>
-						<li class="tag-4"><a href="http://www.joejean.net/tag/recurse-center/">recurse center</a></li>
-						<li class="tag-1"><a href="http://www.joejean.net/tag/programming/">programming</a></li>
-						<li class="tag-2"><a href="http://www.joejean.net/tag/tech/">tech</a></li>
 						<li class="tag-4"><a href="http://www.joejean.net/tag/pelican/">pelican</a></li>
 						<li class="tag-1"><a href="http://www.joejean.net/tag/python/">python</a></li>
+						<li class="tag-4"><a href="http://www.joejean.net/tag/githubpages/">githubpages</a></li>
+						<li class="tag-4"><a href="http://www.joejean.net/tag/books/">books</a></li>
+						<li class="tag-1"><a href="http://www.joejean.net/tag/javascript/">javascript</a></li>
+						<li class="tag-2"><a href="http://www.joejean.net/tag/tech/">tech</a></li>
+						<li class="tag-1"><a href="http://www.joejean.net/tag/mashups/">mashups</a></li>
 						<li class="tag-4"><a href="http://www.joejean.net/tag/summer2015/">summer2015</a></li>
+						<li class="tag-4"><a href="http://www.joejean.net/tag/recurse-center/">recurse center</a></li>
+						<li class="tag-1"><a href="http://www.joejean.net/tag/programming/">programming</a></li>
+						<li class="tag-4"><a href="http://www.joejean.net/tag/reading/">reading</a></li>
+						<li class="tag-4"><a href="http://www.joejean.net/tag/information/">information</a></li>
 						<li class="tag-2"><a href="http://www.joejean.net/tag/communication/">communication</a></li>
 				</ul>
                     
