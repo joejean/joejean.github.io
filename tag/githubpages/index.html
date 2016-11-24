@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="http://www.joejean.net/theme/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="http://www.joejean.net/theme/css/joeblog-bootstrap.css"/>
 		<link rel="stylesheet" href="http://www.joejean.net/theme/css/font-awesome.min.css"/>
-        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 		<link rel="icon" href="http://www.joejean.net/theme/images/favicon.ico" />
 
         <link href="http://www.joejean.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Joe Jean Atom Feed" />
@@ -44,7 +44,7 @@
                     <li><a href="http://www.joejean.net/pages/about-me/">About Me</a></li>
                     <li><a href="http://www.joejean.net/pages/portfolio/">Portfolio</a></li>
 
-			<li><a href="http://www.joejean.net/files/Joe_Jean_Bachelor_Of_Science_Computer_Science_May_2016.pdf" target="_blank"> R&eacute;sum&eacute; </a></li>
+			<li><a href="http://www.joejean.net/files/Joe_Jean_Bachelor_Of_Science_Computer_Science.pdf" target="_blank"> R&eacute;sum&eacute; </a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
@@ -57,12 +57,9 @@
 <div class="well">
 			 <h3> <span class="glyphicon glyphicon-info-sign"> </span>  About Me</h3>
 
-				<img src="http://www.joejean.net/images/Profile.png" alt="Joe Jean Picture" class="center-block img-circle img-responsive">
+ <img src="http://www.joejean.net/images/Profile.png" alt="Joe Jean Picture" class="img-circle img-responsive">
 
-				<p> My name is Joe Jean. I'm a passionate Computer Science student. I love building things that solve real problems. I dream big and think positively.
-                <a href="http://www.joejean.net/pages/about-me">Learn more about me</a> </p>
-
-
+<p> My name is Joe Jean. I'm a passionate Software Engineer with a B.S. degree in Computer Science. I currently work at <a href="https://namshi.com/">Namshi</a> in Dubai. I love building things that solve real problems. I dream big and think positively. <a href="http://www.joejean.net/pages/about-me">Learn more about me</a> </p>
 			<hr class="btn-custom">
 
             <h3> <span class="glyphicon glyphicon-envelope"> </span> Get In Touch</h3>
@@ -71,26 +68,10 @@
                     <li> <i class="fa fa-linkedin-square"></i> <a href="http://ae.linkedin.com/in/joejean/">LinkedIn</a></li>
 					<li> <i class="fa fa-google-plus"></i> <a href="http://google.com/+JoeJean">Google+</a></li>
 					<li> <i class="fa fa-github"></i> <a href="https://github.com/joejean">GitHub</a></li>
-                    <li> <i class="fa fa-envelope"></i> <a href="mailto:joe@joejean.info">Email</a></li>
+                    <li> <i class="fa fa-envelope"></i> <a href="mailto:joeclef@hotmail.com">Email</a></li>
                 </ul>
 
-            <hr class="btn-custom">
-
-            <h3><i class="fa fa-archive"></i>  Archives</h3>
-              <div class="row">
-                <div class="col-md-6">
-                  <ul class="list-unstyled">
-                    <li><a href="http://www.joejean.net/archives.html/">2014</a></li>
-
-                  </ul>
-                </div>
-                <div class="col-md-6">
-                  <ul class="list-unstyled">
-                    <li><a href="#alien-abductions"></a></li>
-
-                  </ul>
-                </div>
-              </div>
+            <!-- <hr class="btn-custom"> -->
 
 
 </div><!-- /well -->        </div> <!-- Side bar -->
@@ -109,10 +90,13 @@
         
 					
 					<div class="panel-body">
-					<h2><a href="http://www.joejean.net/articles/deploying-my-personal-website-tp-github-pages/">Moving My Personal Website from Heroku to Github Pages</a></h2>
-					<p><p>When I first built my personal website I deployed it to Heroku. At that time Heroku was the best option for me because it offered a free tier and it was relatively easy to use. But one thing I did not like about it was that the application dyno--the container ...</p>...<a href="http://www.joejean.net/articles/deploying-my-personal-website-tp-github-pages/"> Read More</a><p>
+					<h2><a href="http://www.joejean.net/articles/deploying-my-personal-website-to-github-pages/">Moving My Personal Website from Heroku to Github Pages</a></h2>
+					<p><p>When I first built my personal website I deployed it to Heroku. At that time Heroku was the best option for me because it offered a free tier and it was relatively easy to use. But one thing I did not like about it was that the application dyno&mdash;the ...</p>...<a href="http://www.joejean.net/articles/deploying-my-personal-website-to-github-pages/"> Read More</a><p>
 					</div>
-					<div class="panel-footer"> <i class="fa fa-user"></i> by Joe Jean <span class="pull-right"> <i class="fa fa-calendar"></i> Sun 08 November 2015</span> </div>
+					<div class="panel-footer"> 
+                    <i class="fa fa-user"></i> by Joe Jean <span class="pull-right"> <i class="fa fa-calendar"></i> Nov 08, 2015</span> 
+                    </div>
+                    
 					</div>
 
 <ul class="pager">
@@ -131,7 +115,7 @@
 			<div class="row">
 			  <div class="col-md-12">
 			    <hr class="btn-custom">
-				<p> Copyright &copy; Joe Jean 2014-2015. Designed and built by <a href="mailto:joe@joejean.net">Joe Jean</a>.
+				<p> Copyright &copy; Joe Jean 2014-<span id="current_year"></span>. Designed and built by <a href="mailto:joe@joejean.net">Joe Jean</a>.
                 <span class="pull-right">
 
                             <i class="fa fa-rss"></i> <a href="http://www.joejean.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom feed</a>
@@ -189,5 +173,8 @@
     <script src="http://www.joejean.net/theme/js/bootstrap.min.js"></script>
 	<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript">
+        $('#current_year').text((new Date()).getFullYear());
+    </script>
 </body>
 </html>

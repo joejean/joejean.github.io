@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="http://www.joejean.net/theme/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="http://www.joejean.net/theme/css/joeblog-bootstrap.css"/>
 		<link rel="stylesheet" href="http://www.joejean.net/theme/css/font-awesome.min.css"/>
-        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 		<link rel="icon" href="http://www.joejean.net/theme/images/favicon.ico" />
 
         <link href="http://www.joejean.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Joe Jean Atom Feed" />
@@ -44,7 +44,7 @@
                     <li><a href="http://www.joejean.net/pages/about-me/">About Me</a></li>
                     <li><a href="http://www.joejean.net/pages/portfolio/">Portfolio</a></li>
 
-			<li><a href="http://www.joejean.net/files/Joe_Jean_Bachelor_Of_Science_Computer_Science_May_2016.pdf" target="_blank"> R&eacute;sum&eacute; </a></li>
+			<li><a href="http://www.joejean.net/files/Joe_Jean_Bachelor_Of_Science_Computer_Science.pdf" target="_blank"> R&eacute;sum&eacute; </a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
@@ -58,7 +58,7 @@
         
           <!-- the actual blog post: title/author/date/content -->
           <h1>[Mashups Class] How to set a default value for a function's parameter in Javascript & first project idea</h1>
-          <p><span class="glyphicon glyphicon-user"></span> by Joe Jean | <span class="glyphicon glyphicon-time"></span> on Tue 16 September 2014 |
+          <p><span class="glyphicon glyphicon-user"></span> by Joe Jean | <span class="glyphicon glyphicon-time"></span> on Sep 16, 2014 |
 			<span class="glyphicon glyphicon-tag"></span> under: <span class="badge">Mashups</span> </p>
           <hr>
           
@@ -79,58 +79,58 @@ So, after a little bit of research, I found a <a href="http://stackoverflow.com/
 <pre>
     <code>
       // Solutions to exercises from chapter 2 of Eloquent Javascript</p>
-<div class="highlight"><pre>    <span class="c1">//1- Looping a triangle</span>
-    <span class="kd">var</span> <span class="nx">drawRightTriangle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">height</span><span class="p">){</span>
-        <span class="c1">//I give height a default value in case the user does not provide any value.</span>
-        <span class="nx">height</span> <span class="o">=</span> <span class="k">typeof</span> <span class="nx">height</span> <span class="o">!==</span> <span class="s1">&#39;undefined&#39;</span><span class="o">?</span> <span class="nx">height</span><span class="o">:</span> <span class="mi">7</span><span class="p">;</span>
-        <span class="nx">block</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">height</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-            <span class="nx">block</span> <span class="o">=</span> <span class="nx">block</span> <span class="o">+</span> <span class="s2">&quot;#&quot;</span><span class="p">;</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">block</span><span class="p">);</span>
+<div class="highlight"><pre><span></span>    <span class="o">//</span><span class="nt">1-</span> <span class="nt">Looping</span> <span class="nt">a</span> <span class="nt">triangle</span>
+    <span class="nt">var</span> <span class="nt">drawRightTriangle</span> <span class="o">=</span> <span class="nt">function</span><span class="o">(</span><span class="nt">height</span><span class="o">)</span><span class="p">{</span>
+        <span class="o">//</span><span class="n">I</span> <span class="n">give</span> <span class="nb">height</span> <span class="n">a</span> <span class="nb">default</span> <span class="n">value</span> <span class="n">in</span> <span class="n">case</span> <span class="n">the</span> <span class="n">user</span> <span class="n">does</span> <span class="n">not</span> <span class="n">provide</span> <span class="n">any</span> <span class="n">value</span><span class="o">.</span>
+        <span class="nb">height</span> <span class="o">=</span> <span class="n">typeof</span> <span class="nb">height</span> <span class="o">!==</span> <span class="s1">&#39;undefined&#39;</span><span class="o">?</span> <span class="nb">height</span><span class="o">:</span> <span class="m">7</span><span class="p">;</span>
+        <span class="nb">block</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">;</span>
+        <span class="n">for</span> <span class="p">(</span><span class="n">var</span> <span class="n">i</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">height</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="err">{</span>
+            <span class="nb">block</span> <span class="o">=</span> <span class="nb">block</span> <span class="o">+</span> <span class="s2">&quot;#&quot;</span><span class="p">;</span>
+            <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="nb">block</span><span class="p">);</span>
         <span class="p">}</span>
-    <span class="p">}</span>
+    <span class="err">}</span>
 
-    <span class="c1">//2- FizzBuzz</span>
-    <span class="kd">var</span> <span class="nx">fizzBuzz</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">lowerLimit</span><span class="p">,</span><span class="nx">upperLimit</span><span class="p">){</span>
-        <span class="nx">lowerLimit</span> <span class="o">=</span> <span class="k">typeof</span> <span class="nx">lowerLimit</span> <span class="o">!==</span> <span class="s1">&#39;undefined&#39;</span> <span class="o">?</span> <span class="nx">lowerLimit</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="nx">upperLimit</span> <span class="o">=</span> <span class="k">typeof</span> <span class="nx">upperLimit</span> <span class="o">!==</span> <span class="s1">&#39;undefined&#39;</span> <span class="o">?</span> <span class="nx">upperLimit</span> <span class="o">:</span> <span class="mi">100</span><span class="p">;</span>
+    <span class="o">//</span><span class="nt">2-</span> <span class="nt">FizzBuzz</span>
+    <span class="nt">var</span> <span class="nt">fizzBuzz</span> <span class="o">=</span> <span class="nt">function</span><span class="o">(</span><span class="nt">lowerLimit</span><span class="o">,</span><span class="nt">upperLimit</span><span class="o">)</span><span class="p">{</span>
+        <span class="n">lowerLimit</span> <span class="o">=</span> <span class="n">typeof</span> <span class="n">lowerLimit</span> <span class="o">!==</span> <span class="s1">&#39;undefined&#39;</span> <span class="o">?</span> <span class="n">lowerLimit</span> <span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+        <span class="n">upperLimit</span> <span class="o">=</span> <span class="n">typeof</span> <span class="n">upperLimit</span> <span class="o">!==</span> <span class="s1">&#39;undefined&#39;</span> <span class="o">?</span> <span class="n">upperLimit</span> <span class="o">:</span> <span class="m">100</span><span class="p">;</span>
 
-        <span class="k">for</span><span class="p">(</span> <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">lowerLimit</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">upperLimit</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-          <span class="k">if</span> <span class="p">(</span> <span class="nx">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span><span class="mi">0</span><span class="p">){</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="s2">&quot;: FizzBuzz&quot;</span><span class="p">);</span>
+        <span class="n">for</span><span class="p">(</span> <span class="n">var</span> <span class="n">i</span> <span class="o">=</span> <span class="n">lowerLimit</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">upperLimit</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="err">{</span>
+          <span class="n">if</span> <span class="p">(</span> <span class="n">i</span> <span class="o">%</span> <span class="m">3</span> <span class="o">==</span> <span class="m">0</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">%</span> <span class="m">5</span> <span class="o">==</span><span class="m">0</span><span class="p">)</span><span class="err">{</span>
+            <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s2">&quot;: FizzBuzz&quot;</span><span class="p">);</span>
           <span class="p">}</span>
-          <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="o">+</span> <span class="s2">&quot;: Fizz&quot;</span><span class="p">);</span>
+          <span class="nt">else</span> <span class="nt">if</span> <span class="o">(</span><span class="nt">i</span> <span class="o">%</span> <span class="nt">3</span> <span class="o">==</span> <span class="nt">0</span><span class="o">)</span><span class="p">{</span>
+            <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">i</span><span class="o">+</span> <span class="s2">&quot;: Fizz&quot;</span><span class="p">);</span>
           <span class="p">}</span>
 
-          <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="nx">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="s1">&#39;: Buzz&#39;</span><span class="p">);</span>
+          <span class="nt">else</span> <span class="nt">if</span> <span class="o">(</span> <span class="nt">i</span> <span class="o">%</span> <span class="nt">5</span> <span class="o">==</span> <span class="nt">0</span><span class="o">)</span><span class="p">{</span>
+            <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s1">&#39;: Buzz&#39;</span><span class="p">);</span>
           <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+        <span class="err">}</span>
+    <span class="err">}</span>
 
-    <span class="c1">//3 - Chess  Board</span>
-    <span class="kd">var</span> <span class="nx">chessBoard</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">size</span><span class="p">){</span>
+    <span class="o">//</span><span class="nt">3</span> <span class="nt">-</span> <span class="nt">Chess</span>  <span class="nt">Board</span>
+    <span class="nt">var</span> <span class="nt">chessBoard</span> <span class="o">=</span> <span class="nt">function</span><span class="o">(</span><span class="nt">size</span><span class="o">)</span><span class="p">{</span>
 
-        <span class="nx">size</span> <span class="o">=</span> <span class="k">typeof</span> <span class="nx">size</span> <span class="o">!==</span> <span class="s1">&#39;undefined&#39;</span><span class="o">?</span> <span class="nx">size</span> <span class="o">:</span> <span class="mi">8</span><span class="p">;</span>
+        <span class="nb">size</span> <span class="o">=</span> <span class="n">typeof</span> <span class="nb">size</span> <span class="o">!==</span> <span class="s1">&#39;undefined&#39;</span><span class="o">?</span> <span class="nb">size</span> <span class="o">:</span> <span class="m">8</span><span class="p">;</span>
 
-        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">size</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-            <span class="kd">var</span> <span class="nx">line</span><span class="o">=</span> <span class="s2">&quot; &quot;</span>
-            <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">size</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">){</span>
-            <span class="k">if</span> <span class="p">(</span> <span class="nx">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
-                <span class="k">if</span> <span class="p">(</span> <span class="nx">j</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>  <span class="nx">line</span> <span class="o">=</span> <span class="nx">line</span> <span class="o">+</span> <span class="s2">&quot;#&quot;</span><span class="p">;</span>
-                <span class="k">else</span> <span class="nx">line</span> <span class="o">=</span> <span class="nx">line</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="p">;</span>
+        <span class="n">for</span> <span class="p">(</span><span class="n">var</span> <span class="n">i</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="err">{</span>
+            <span class="n">var</span> <span class="n">line</span><span class="o">=</span> <span class="s2">&quot; &quot;</span>
+            <span class="n">for</span><span class="p">(</span><span class="n">var</span> <span class="n">j</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">size</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="err">{</span>
+            <span class="n">if</span> <span class="p">(</span> <span class="n">i</span> <span class="o">%</span> <span class="m">2</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span><span class="err">{</span>
+                <span class="n">if</span> <span class="p">(</span> <span class="n">j</span> <span class="o">%</span> <span class="m">2</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span>  <span class="n">line</span> <span class="o">=</span> <span class="n">line</span> <span class="o">+</span> <span class="s2">&quot;#&quot;</span><span class="p">;</span>
+                <span class="n">else</span> <span class="n">line</span> <span class="o">=</span> <span class="n">line</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="p">;</span>
             <span class="p">}</span>
-            <span class="k">else</span> <span class="p">{</span>
+            <span class="nt">else</span> <span class="p">{</span>
 
-              <span class="k">if</span> <span class="p">(</span> <span class="nx">j</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>  <span class="nx">line</span> <span class="o">=</span> <span class="nx">line</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="p">;</span>
-              <span class="k">else</span> <span class="nx">line</span> <span class="o">=</span> <span class="nx">line</span> <span class="o">+</span> <span class="s2">&quot;#&quot;</span><span class="p">;</span>
+              <span class="n">if</span> <span class="p">(</span> <span class="n">j</span> <span class="o">%</span> <span class="m">2</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span>  <span class="n">line</span> <span class="o">=</span> <span class="n">line</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="p">;</span>
+              <span class="n">else</span> <span class="n">line</span> <span class="o">=</span> <span class="n">line</span> <span class="o">+</span> <span class="s2">&quot;#&quot;</span><span class="p">;</span>
             <span class="p">}</span>
 
-            <span class="p">}</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">line</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+            <span class="err">}</span>
+            <span class="nt">console</span><span class="nc">.log</span><span class="o">(</span><span class="nt">line</span><span class="o">);</span>
+        <span class="err">}</span>
+    <span class="err">}</span>
 </pre></div>
 
 
@@ -165,82 +165,44 @@ So, after a little bit of research, I found a <a href="http://stackoverflow.com/
 
         </div>
 		
-		<!-- Social -->
-		<div class="col-md-1">
-		</div>
-		
+<!-- Social -->
+        <div class="col-md-1">
+        </div>
+        
         <div class="col-md-3">
           <div class="well">
-		   <h3> <span class="glyphicon glyphicon-info-sign"> </span>  About Me</h3>
-			 
-				<img src="https://dl.dropboxusercontent.com/u/73165478/Joe_Jean_ID.jpg" alt="Joe Jean Picture" class="img-circle img-responsive">
+           <h3> <span class="glyphicon glyphicon-info-sign"> </span> About Me</h3>
+             
+ <img src="http://www.joejean.net/images/Profile.png" alt="Joe Jean Picture" class="img-circle img-responsive">
 
-				<p> My name is Joe Jean. I'm a passionate Computer Science student. I love building things that solve real problems. I dream big and think positively.
-                <a href="http://www.joejean.net/pages/about-me">Learn more about me</a> </p>
-                
-                
+<p> My name is Joe Jean. I'm a passionate Software Engineer with a B.S. degree in Computer Science. I currently work at <a href="https://namshi.com/">Namshi</a> in Dubai. I love building things that solve real problems. I dream big and think positively. <a href="http://www.joejean.net/pages/about-me">Learn more about me</a> </p>                
             <h3> <span class="glyphicon glyphicon-envelope"> </span> Get In Touch</h3>
-				<ul class="list-unstyled">
+                <ul class="list-unstyled">
                     <li> <i class="fa fa-facebook-square"></i> <a href="https://www.facebook.com/joe.jean3">Facebook</a></li>
                     <li> <i class="fa fa-linkedin-square"></i> <a href="http://ae.linkedin.com/in/joejean/">LinkedIn</a></li>
-					<li> <i class="fa fa-google-plus"></i> <a href="http://google.com/+JoeJean">Google+</a></li>
-					<li> <i class="fa fa-github"></i> <a href="https://github.com/joejean">GitHub</a></li>
-                    <li> <i class="fa fa-envelope"></i> <a href="mailto:joe@joejean.net">Email</a></li>
+                    <li> <i class="fa fa-google-plus"></i> <a href="http://google.com/+JoeJean">Google+</a></li>
+                    <li> <i class="fa fa-github"></i> <a href="https://github.com/joejean">GitHub</a></li>
+                    <li> <i class="fa fa-envelope"></i> <a href="mailto:joeclef@hotmail.com">Email</a></li>
                 </ul>
             
             <hr class="btn-custom">
          
-			<h3> <i class="fa fa-tags"></i> Tags</h3>
-				<ul class="list-unstyled">
-					
-						<li class="tag-1"><a href="http://www.joejean.net/tag/api/">api</a></li>
-						<li class="tag-1"><a href="http://www.joejean.net/tag/mashups/">mashups</a></li>
-						<li class="tag-4"><a href="http://www.joejean.net/tag/books/">books</a></li>
-						<li class="tag-4"><a href="http://www.joejean.net/tag/githubpages/">githubpages</a></li>
-						<li class="tag-1"><a href="http://www.joejean.net/tag/javascript/">javascript</a></li>
-						<li class="tag-4"><a href="http://www.joejean.net/tag/information/">information</a></li>
-						<li class="tag-4"><a href="http://www.joejean.net/tag/reading/">reading</a></li>
-						<li class="tag-4"><a href="http://www.joejean.net/tag/recurse-center/">recurse center</a></li>
-						<li class="tag-1"><a href="http://www.joejean.net/tag/programming/">programming</a></li>
-						<li class="tag-2"><a href="http://www.joejean.net/tag/tech/">tech</a></li>
-						<li class="tag-4"><a href="http://www.joejean.net/tag/pelican/">pelican</a></li>
-						<li class="tag-1"><a href="http://www.joejean.net/tag/python/">python</a></li>
-						<li class="tag-4"><a href="http://www.joejean.net/tag/summer2015/">summer2015</a></li>
-						<li class="tag-2"><a href="http://www.joejean.net/tag/communication/">communication</a></li>
-				</ul>
+            <h3> <i class="fa fa-tags"></i> Tags</h3>
+                <ul class="list-unstyled">
                     
-               
-			<hr class="btn-custom">
-			
-            <h3><i class="fa fa-archive"></i>  Archives</h3>
-              <div class="row">
-                <div class="col-md-6">
-                  <ul class="list-unstyled">
-                    <li><a href="http://www.joejean.net/archives.html/">2013</a></li>
+                </ul>
                     
-                  </ul>
-                </div>
-                <div class="col-md-6">
-                  <ul class="list-unstyled">
-                    <li><a href="#alien-abductions"></a></li>
-                    
-                  </ul>
-                </div>
-              </div>
-			  
-          
+           <!--  <hr class="btn-custom"> -->
             
           </div><!-- /well -->
-        </div> <!-- col-md-3 -->
-      </div>    
-
+        </div> <!-- col-md-3 -->   
 
 
         <footer>
 			<div class="row">
 			  <div class="col-md-12">
 			    <hr class="btn-custom">
-				<p> Copyright &copy; Joe Jean 2014-2015. Designed and built by <a href="mailto:joe@joejean.net">Joe Jean</a>.
+				<p> Copyright &copy; Joe Jean 2014-<span id="current_year"></span>. Designed and built by <a href="mailto:joe@joejean.net">Joe Jean</a>.
                 <span class="pull-right">
 
                             <i class="fa fa-rss"></i> <a href="http://www.joejean.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom feed</a>
@@ -298,5 +260,8 @@ So, after a little bit of research, I found a <a href="http://stackoverflow.com/
     <script src="http://www.joejean.net/theme/js/bootstrap.min.js"></script>
 	<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript">
+        $('#current_year').text((new Date()).getFullYear());
+    </script>
 </body>
 </html>

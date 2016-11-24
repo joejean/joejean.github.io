@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="http://www.joejean.net/theme/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="http://www.joejean.net/theme/css/joeblog-bootstrap.css"/>
 		<link rel="stylesheet" href="http://www.joejean.net/theme/css/font-awesome.min.css"/>
-        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 		<link rel="icon" href="http://www.joejean.net/theme/images/favicon.ico" />
 
         <link href="http://www.joejean.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Joe Jean Atom Feed" />
@@ -44,7 +44,7 @@
                     <li><a href="http://www.joejean.net/pages/about-me/">About Me</a></li>
                     <li><a href="http://www.joejean.net/pages/portfolio/">Portfolio</a></li>
 
-			<li><a href="http://www.joejean.net/files/Joe_Jean_Bachelor_Of_Science_Computer_Science_May_2016.pdf" target="_blank"> R&eacute;sum&eacute; </a></li>
+			<li><a href="http://www.joejean.net/files/Joe_Jean_Bachelor_Of_Science_Computer_Science.pdf" target="_blank"> R&eacute;sum&eacute; </a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
@@ -63,7 +63,7 @@
 			<div class="row">
 			  <div class="col-md-12">
 			    <hr class="btn-custom">
-				<p> Copyright &copy; Joe Jean 2014-2015. Designed and built by <a href="mailto:joe@joejean.net">Joe Jean</a>.
+				<p> Copyright &copy; Joe Jean 2014-<span id="current_year"></span>. Designed and built by <a href="mailto:joe@joejean.net">Joe Jean</a>.
                 <span class="pull-right">
 
                             <i class="fa fa-rss"></i> <a href="http://www.joejean.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom feed</a>
@@ -121,5 +121,8 @@
     <script src="http://www.joejean.net/theme/js/bootstrap.min.js"></script>
 	<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript">
+        $('#current_year').text((new Date()).getFullYear());
+    </script>
 </body>
 </html>
