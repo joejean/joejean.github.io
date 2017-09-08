@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="title" content="5 Tips for writing more concise and elegant code in Python">
-	<link rel="canonical" href="https://www.joejean.net/articles/5-tips-for-writing-more-concise-elegant-python/">
-	<title> 5 Tips for writing more concise and elegant code in Python</title>
+	<meta name="title" content="Automating The Deployment of a Codeigniter/PHP Website with Deployer">
+	<link rel="canonical" href="https://www.joejean.net/articles/automating-the-deployment-of-a-codeigniter-php-website-with-deployer/">
+	<title> Automating The Deployment of a Codeigniter/PHP Website with Deployer</title>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
@@ -19,12 +19,12 @@
         <!-- Twitter Card data -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@joeclef509">
-        <meta name="twitter:title" content="5 Tips for writing more concise and elegant code in Python" >
-        <meta name="twitter:description" content="Last week, I was reviewing some of the first lines of code I wrote when I was learning python three years ago. While they worked, I no...">
+        <meta name="twitter:title" content="Automating The Deployment of a Codeigniter/PHP Website with Deployer" >
+        <meta name="twitter:description" content="About 4 months ago, I started using some of my free time to help build Labocine.com, an amazing new...">
         
         <!-- Open Graph Data -->
-        <meta property="og:title" content="5 Tips for writing more concise and elegant code in Python" /> 
-        <meta property="og:description" content="Last week, I was reviewing some of the first lines of code I wrote when I was learning python three years ago. While they worked, I now realise that there are many things I could have done in a ..."/>
+        <meta property="og:title" content="Automating The Deployment of a Codeigniter/PHP Website with Deployer" /> 
+        <meta property="og:description" content="About 4 months ago, I started using some of my free time to help build Labocine.com, an amazing new platform for science cinema. The back-end is written using..."/>
         
 
         <link rel="stylesheet" href="https://www.joejean.net/theme/css/bootstrap.min.css"/>
@@ -76,113 +76,51 @@
         <div class="col-md-10">
         
           <!-- the actual blog post: title/author/date/content -->
-          <h1 class="text-justify">5 Tips for writing more concise and elegant code in Python</h1>
-          <p><span class="glyphicon glyphicon-user"></span> by Joe Jean | <span class="glyphicon glyphicon-time"></span> on Mar 06, 2014 |
+          <h1 class="text-justify">Automating The Deployment of a Codeigniter/PHP Website with Deployer</h1>
+          <p><span class="glyphicon glyphicon-user"></span> by Joe Jean | <span class="glyphicon glyphicon-time"></span> on Jan 29, 2017 |
 			<span class="glyphicon glyphicon-tag"></span> under: <span class="badge">Programming</span> </p>
           <hr>
           
-          <p>Last week, I was reviewing some of the first lines of code I wrote when I was learning python three years ago. While they worked, I now realise that
-there are many things I could have done in a more elegant and concise way. Of course, when learning a new programming language one is always 
-encouraged to build things from scratch, to write one's own functions, classes or methods to do things even when such code might already exists. 
-</p>
-<p>This approach is definitely useful for a beginner. However, once one understands the basics, it is a good idea to start using code and techniques already 
-provided --at least by the programming language itself. This will not only help you build things faster but also -- in most cases -- make your code more concise and readable. 
-The following are five tips that you can start using today to make your python code more concise and elegant. </p>
-<h3>1) Prefer the return statement to evaluate your expression and return its result for you</h3>
-<p>Sometimes you have a function that returns the result of an expression. Let's say it's a boolean expression, so the return value can be either 
-true or false. One usually uses a  variable to store the result of the expression and then return that variable, such as this:
-<pre><code>
-def isEven(a):
-    if (a % 2)==0:
-        result = True
-    else:
-        result = False
-    return result
-</code></pre>
-However, a more elegant way to reach the same result is to put the entire expression in the return statement and it will compute and return the result of the
-expression as follow:
-<pre><code>
-def isEven(a):
-    return (a % 2)==0
-</code></pre>
-This is possible because the return statement actually returns the result of evaluating an expression. And in case you are wondering, in python numbers eveluate to themselves.</p>
-<h3>2) Prefer Python's builtin <code>format()</code> function to format your strings</h3>
-<p>Imagine you have an object called "Player" which has attributes such has name and age. Now imagine that you have
-a function called printPlayerInfo() that prints the player's information. One would usually uses the plus sign (+) to concatenate the string literals with
-the string variables, such as this:
-<pre><code>
-def printPlayerInfo(Player):
-    return "The player's name is "+Player.name+" and the player is "+str(Player.age)+" years old"
-</code></pre> <br />
-However, a more elegant way to do this is to use python's builtin format() function. Thus our function becomes:</p>
-<pre><code>
-def printPlayerInfo(Player):
-    return "The player Name is {Player.name} and the player is {Player.age} years old".format(Player=Player)
+          <p>About 4 months ago, I started using some of my free time to help build <a href="http://labocine.com/">Labocine.com</a>, an amazing new platform for science cinema.  The back-end is written using the PHP framework <a href="https://www.codeigniter.com/">Codeigniter</a>. Being at its early stage, the site was hosted on one of those traditional hosting providers. And the deployment of new features was done using the traditional ftp approach. After joining the project and as it grew, I decided to host it on a VPS and automate the deployment process. My goal for this post is to show you how you can easily automate the deployment of your Codeigniter web application, or any PHP web application for that matter.</p>
+<p>Before we can proceed, you need to make sure of two things. First, your project needs to be version controlled and available on a git hosting service such as Github, Bitbucket or Gitlab. Second, you need to have ssh access to the server where your application is (to be) hosted. </p>
+<p>The deployment tool we are going to use is called <a href="https://deployer.org/">Deployer</a>. Let's start by installing it in our Codeigniter project. I recommend using composer for the installation. Assuming you have composer installed on your computer, run the following command in the root of your project repository. 
+<pre><code class="php">
+    composer require-dev deployer/deployer
+</code></pre></p>
+<p>You should now have a <code>bin</code> folder along with a <code>deployer</code> folder inside the <code>vendor</code> folder in your application root. </p>
+<p>Now, while still in the root of the project repository, let's create a file called <code>deploy.php</code>. This file, called a <code>recipe</code>,  will contain the custom deployment configurations that Deployer will be relying upon to deploy your application. Following is an example <code>deploy.php</code>. </p>
+<pre><code class="php7">
+require 'recipe/codeigniter.php';
+set('default_stage', 'live');
+server('SERVER_NAME', 'SERVER_IP_ADDRESS')
+    ->identityFile()
+    ->user('YOUR_USERNAME_ON_SERVER')
+    ->stage('live')
+    ->env('deploy_path', '/var/www/html/app');
+ set('repository', '-b branch-name git@github.com:test/SAMPLEREPO.git');
 </code></pre>
 
-<p>As you can see, in addittion to making your code more readable, the format function spares the programmer the extra burden of casting all numbers to strings.   </p>
-<h3>3) Prefer a tuple instead of a temporary variable when swaping the values of two variables</h3>
-<p>When one wants to swap the values of two variables, they usually use a third variable as a temporary storage for one of the two values. Let's imagine that 
-we want to swap the values of the variables <code>currentScore</code> and <code>prevScore</code>, one usually proceed as follow:</p>
-<pre><code>
-currentScore = 34
-prevScore = 23
-temp = currentScore
-currentScore = prevScore
-prevScore = temp
+<p>Now let's go over the content of <code>deploy.php</code>. Since we are going to deploy a Codeigniter application , our <code>deploy.php</code> recipe needs to extend the Codeigniter recipe, and this is what we do in the second line. If you are using another framework, you can find the list of all the supported recipes <a href="https://github.com/deployphp/deployer/tree/master/recipe">here</a>. 
+On the 3rd line, we set the default stage. The stage is more like an environment and in our case we set it to <code>live</code>. So, your stage could be development, staging etc. Next, we configure our server where our code will be deployed. We give the server a name, any name we want, and we provide its IP address. In the following line, we use <code>identityFile()</code> to tell Deployer that we want to connect to our server using ssh and the ssh keys are located in our <code>.ssh</code> folder. If your keys are located somewhere else or if they were created with a password you can still pass the the full path to your keys as follows:</p>
+<pre><code class="php">
+identityFile("~/path_to_ssh_folder/id_rsa.pub","~/path_to_ssh_folder/id_rsa", "pass phrase");
 </code></pre>
 
-<p>However, this can be done more elegantly using a python tuple:</p>
-<pre><code>
-currentScore = 34
-prevScore = 23
-(currentScore, prevScore) = (prevScore, currentScore)
+<p>You can also configure Deployer to log into your server using a username and password, please see <a href="https://deployer.org/docs/servers">the documentation</a> for an example on how to do that. In the next 3 lines we pass it the username with which to ssh into our server, we tie this server to a stage which is the default stage in this case, and we provide the path where our application should be deployed. The last thing we need to do is to  specify the git repository which contains the code to be deployed. It is important to note that in this example we are using one server, but you can configure however many servers you want in your <code>deploy.php</code>.</p>
+<p>Now we are ready to deploy our app. In order to do so we just need to type, while in the root of our project,
+<pre><code>php vendor/bin/dep deploy live</code></pre> or 
+<pre><code>php vendor/bin/dep deploy SERVER_NAME</code></pre> Since we set the default stage to <code>live</code>, we can also just do <code>php vendor/bin/dep deploy</code>. </p>
+<p>After deploying, if something breaks, rolling back to the previous working version of your site is as easy as <pre><code>php vendor/bin/dep rollback live </code></pre> </p>
+<p>Imagine you create a new branch, work on it, commit and push your changes. In order to deploy those changes, you need to manually go into the <code>deploy.php</code> file and change the branch name in the last line: <pre><code>set('repository', '-b branch-name git@github.com:test/SAMPLEREPO.git');</code></pre>This is a bit tedious, isn't it? Instead, we can just create a pre-commit hook that will go and make that change for us every time we commit. Here is what my <code>.git/hooks/pre-commit</code> looks like:</p>
+<pre><code class="bash">
+branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+sed -i '$ d' deploy.php
+echo "set('repository', '-b $branch git@github.com:test/SAMPLEREPO.git');">> deploy.php
+git add deploy.php
 </code></pre>
 
-<h3>4) Prefer list comprehension to create a new list out of an existing one</h3>
-<p>Imagine that you have a list of numbers,<code>firstList</code> and you want to create a second list,<code>secondList</code>  with all the even numbers - we assume there are some- contained 
-in <code>firstList</code>. Usually one would proceed as follow:</p>
-<pre><code>
-firstList = [2283, 4, 567, 236, 4458]
-secondList = []
-
-for val in firstList:
-    if val % 2 == 0:
-        secondList.append(val)
-
-</code></pre>
-
-<p>However, a more elegant and pythonic way to do the same thing is to use list comprehension notation as follows:</p>
-<pre><code>
-firstList = [2283, 4, 567, 236, 4458]
-secondList = [ val for val in list1 if val%2 == 0]
-</code></pre>
-
-<p>Well, some people might argue that the first method is more comprehensible than the second one. I would say that such a view is influenced by their knowledge of 
-other programming languages. Furthermore, list comprehension is a python specific feature which is created to make code more beautiful and concise. </p>
-<h3>5) Prefer the list's <code>count()</code> method to count the number of times an item appears on the list:</h3>
-<p>Imagine that you have a list that has a couple of names for example. And, let's say you want to count the number of times a certain name appears on the list.
-Usually one would proceed as follow:</p>
-<pre><code>
-nameList = ["aaa", "bbb", "aaa", "ccc", "ddd"]
-count =0
-for name in nameList:
-    if name == "aaa":
-        count += 1
-
-</code></pre>
-
-<p>However, to achieve the same result you can simply use python's builtin list <code>count()</code> method as follow:</p>
-<pre><code> 
-nameList = ["aaa", "bbb", "aaa", "ccc", "ddd"]
-count = nameList.count("aaa")
-</code></pre>
-
-<p>The python list data type has more of those useful builtin methods that can not only make your life easier but aslo make your code more readable and concise. 
-You can find them in the <a href = "http://docs.python.org/2/tutorial/datastructures.html#more-on-lists" target="_blank"> python documentation.</a>
-<br />
-<br />
-<br /></p>
+<p>With something like that in place, I do not need to manually edit the <code>deploy.php</code>  every time I want to deploy a new branch. After a <code>git push</code> I can do a <code>dep deploy</code> and be sure that my latest changes on my new branch will get deployed. </p>
+<p>If you use Deployer in some other interesting ways, or if you use other tools for your deployment, please feel free to leave a comment below. </p>
           
           
           <!-- the comment box -->
@@ -193,8 +131,8 @@ You can find them in the <a href = "http://docs.python.org/2/tutorial/datastruct
 
 				  <div id="disqus_thread"></div>
 				  <script type="text/javascript">
-					var disqus_identifier = "articles/5-tips-for-writing-more-concise-elegant-python/";
-					var disqus_url = "https://www.joejean.net/articles/5-tips-for-writing-more-concise-elegant-python/";
+					var disqus_identifier = "articles/automating-the-deployment-of-a-codeigniter-php-website-with-deployer/";
+					var disqus_url = "https://www.joejean.net/articles/automating-the-deployment-of-a-codeigniter-php-website-with-deployer/";
 					(function() {
 					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 					dsq.src = 'https://joejeanblog.disqus.com/embed.js';
