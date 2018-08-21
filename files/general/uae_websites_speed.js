@@ -6,6 +6,7 @@ var API_KEY = 'AIzaSyDjGFiLuWMaXN6usMdpSqocr79la6gXpYU';
 google.charts.load('current', {'packages':['table','corechart']});
 
 var URL_DATA = [
+    "noon.com",
     "Souqalmal.com",
     "emaratyah.ae",
     "Jadopado.com",

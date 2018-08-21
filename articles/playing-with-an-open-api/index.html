@@ -1,39 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
-	<meta name="title" content="[Mashups Class] Playing with an open API">
-	<link rel="canonical" href="https://www.joejean.net/articles/playing-with-an-open-api/">
-	<title> [Mashups Class] Playing with an open API</title>
+            
+                <meta name="title" content="[Mashups Class] Playing with an open API">
+                <link rel="canonical" href="https://www.joejean.net/articles/playing-with-an-open-api/">
+                <title> [Mashups Class] Playing with an open API</title>
+            
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Joe Jean is a passionate Software Engineer. He holds a Bachelor of Science in Computer Science from New York University Abu Dhabi. JoeJean.net is his personal blog where he writes about life, technology and more.">
-		<meta name="author" content="Joe Jean">
+		<meta name="author" content="map[]">
         <link href="/atom.xml" rel="alternate" type="application/rss+xml" title="Joe Jean's Blog" />
 		<meta name="robots" content="all">
-		<meta name="keywords" content="coding, python, computer science, software engineering, web development, computer programming tips, technology">
+		<meta name="keywords" content="coding, python, computer science, developer, programming, haitian programmer, software engineering, web development, computer programming tips, technology">
         <meta property="og:site_name" content="Joe Jean's Blog" /> 
 
+        
 
-        <!-- Twitter Card data -->
+        
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@joeclef509">
         <meta name="twitter:title" content="[Mashups Class] Playing with an open API" >
-        <meta name="twitter:description" content="As part of my first homework for Mashups: Creating with web API,...">
+        <meta name="twitter:description" content="
+
+As part of my first homework for Mashups: Creating with web API, I had to first find, post and describe an API that returns JSON data. …">
         
-        <!-- Open Graph Data -->
+        
         <meta property="og:title" content="[Mashups Class] Playing with an open API" /> 
-        <meta property="og:description" content="As part of my first homework for Mashups: Creating with web API, I had to first find, post and describe an API that returns ..."/>
+        <meta property="og:description" content="
+
+As part of my first homework for Mashups: Creating with web API, I had to first find, post and describe an API that returns JSON data.
+
+Initial Plan
+
+After playing around with a couple of APIs, I …"/>
+        
         
 
-        <link rel="stylesheet" href="https://www.joejean.net/theme/css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="https://www.joejean.net/theme/css/joeblog-bootstrap.css"/>
-		<link rel="stylesheet" href="https://www.joejean.net/theme/css/font-awesome.min.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-		<link rel="icon" href="https://www.joejean.net/theme/images/favicon.ico" />
 
-        <link href="https://www.joejean.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Joe Jean Atom Feed" />
+        <link rel="stylesheet" href="https://www.joejean.net/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="https://www.joejean.net/css/joeblog-bootstrap.css"/>
+		<link rel="stylesheet" href="https://www.joejean.net/css/font-awesome.min.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+		<link rel="icon" href="https://www.joejean.net/images/favicon.ico" />
 
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/atelier-forest-dark.min.css">
 		
@@ -42,136 +53,156 @@
 
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand img-responsive" href="https://www.joejean.net"> <img src="https://www.joejean.net/theme/images/joejeanlogo.png" class="img-responsive logo"/></a>
-        </div>
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand img-responsive" href="https://www.joejean.net"> <img src="https://www.joejean.net/images/joejeanlogo.png" class="img-responsive logo"/></a>
+            </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav pull-right">
+            
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+              <ul class="nav navbar-nav pull-right">
 
-			<li ><a href="https://www.joejean.net">Home</a></li>
+                    <li class="" title="Home"><a href="/">Home</a></li>
 
+                
 
-                    <li><a href="https://www.joejean.net/pages/about/">About</a></li>
-                    <li><a href="https://www.joejean.net/pages/projects/">Projects</a></li>
+                    <li class="" title="About"><a href="/about/">About</a></li>
 
-			<li><a href="https://www.joejean.net/files/Joe_Jean_Software_Engineer.pdf" target="_blank"> R&eacute;sum&eacute; </a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
-    </nav>
+                
+
+                    <li class="" title="Projects"><a href="/projects/">Projects</a></li>
+
+                
+                <li><a href="https://www.joejean.net/files/Joe_Jean_Software_Engineer.pdf" target="_blank"> R&eacute;sum&eacute; </a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
 
     <div class="container">
- <div class="row">
-		
-		
-        <div class="col-md-10">
-        
-          <!-- the actual blog post: title/author/date/content -->
-          <h1 class="text-justify">[Mashups Class] Playing with an open API</h1>
-          <p><span class="glyphicon glyphicon-user"></span> by Joe Jean | <span class="glyphicon glyphicon-time"></span> on Sep 05, 2014 |
-			<span class="glyphicon glyphicon-tag"></span> under: <span class="badge">Mashups</span> </p>
-          <hr>
-          
-          <p>As part of my first homework for <a href="https://github.com/craigprotzel/Mashups" target="_blank">Mashups: Creating with web API</a>, I had to first find, post and describe an API that returns JSON data. </p>
-<h3>Initial Plan</h3>
+
+	 <div class="row">
+			
+			
+	        <div class="col-md-10">
+	        
+	          
+	          <h1 class="text-justify">[Mashups Class] Playing with an open API</h1>
+	          <p><span class="glyphicon glyphicon-user"></span> by  Joe Jean  | <span class="glyphicon glyphicon-time"></span> on September 5, 2014 |
+				<span class="glyphicon glyphicon-tag"></span>  <span class="badge">mashups</span> <span class="badge">programming</span> <span class="badge">javascript</span> <span class="badge">api</span>  </p>
+	          <hr>
+	          
+	          
+
+<p>As part of my first homework for <a href="https://github.com/craigprotzel/Mashups" target="_blank">Mashups: Creating with web API</a>, I had to first find, post and describe an API that returns JSON data.</p>
+
+<h3 id="initial-plan">Initial Plan</h3>
+
 <p>After playing around with a couple of APIs, I decided to use the World Bank API. I like the fact that
 one does not need a key to make requests to this API. And I also found the documentation
 to be clear and useful.</p>
+
 <p>I use the following url <code>http://api.worldbank.org/incomeLevels/LIC/countries?format=json</code>
 in order to get a list of countries with income level classified as low income. As you can see four parameters are used
-in the url. "incomeLevels" is used for information about all levels of income, "LIC" is an acronym that stands for
-Low Level Income, and "countries" is the list of countries. By default, the World Bank API returns XML data. Since I wanted JSON, I had to explicitly specify that in the request url using <code>format=json</code>.</p>
+in the url. &ldquo;incomeLevels&rdquo; is used for information about all levels of income, &ldquo;LIC&rdquo; is an acronym that stands for
+Low Level Income, and &ldquo;countries&rdquo; is the list of countries. By default, the World Bank API returns XML data. Since I wanted JSON, I had to explicitly specify that in the request url using <code>format=json</code>.</p>
+
 <p>For the second part of the assignment, I created a small script that sends a request to the API with the url mentioned above
-and display the data on a nicely formatted HTML page.  Even though my script was syntaxically correct, and the request to the server was successful &mdash; this is confirmed by the debugging info showed in my broswer's developer/Javascript console &mdash;I still could not retrieve any data returned by the API.</p>
+and display the data on a nicely formatted HTML page.  Even though my script was syntaxically correct, and the request to the server was successful &mdash; this is confirmed by the debugging info showed in my broswer&rsquo;s developer/Javascript console &mdash;I still could not retrieve any data returned by the API.</p>
+
 <p>After doing some research about the issue, I found out that  the problem was due to an <a href="http://stackoverflow.com/questions/22186703/modifying-jquery-jsonp-callback-function">implementation issue with the World Bank API.</a>  If you want to learn more about the problem click the  previous link.</p>
-<h3>Second Plan</h3>
+
+<h3 id="second-plan">Second Plan</h3>
+
 <p>So since the World Bank API was not doing the job, I did some more research and found another open&mdash;authentication free&mdash; API: The US government jobs API.
-I use the following url <code>http://api.usa.gov/jobs/search.json?query=tech+jobs</code>to request all open technology related positions offered by government agencies. And I got the data back, manipulated it and displayed it on an HTML page. The page can be accessed <a href="/files/mashups/hmw_1.html" target="_blank"> here. </a> And here is the JS code that does the job:
-<pre><code>
-$(document).ready(function(){</p>
-<div class="highlight"><pre><span></span>          $.ajax({
+I use the following url <code>http://api.usa.gov/jobs/search.json?query=tech+jobs</code>to request all open technology related positions offered by government agencies. And I got the data back, manipulated it and displayed it on an HTML page. The page can be accessed <a href="/files/mashups/hmw_1.html" target="_blank"> here. </a> And here is the JS code that does the job:</p>
 
-                url:&quot;http://api.usa.gov/jobs/search.json?query=tech+jobs&quot;,
-                type: &quot;GET&quot;,
-                dataType: &quot;jsonp&quot;,
+<pre><code class="js">
+$(document).ready(function(){
 
-                success: function(data){
-                  $.each(data, function(index, job){
-                    // Those are for debugging purpose
-                    console.log(job.position_title);
-                    console.log(job.url)
-                    console.log(job.locations[0]);
-                    console.log(job.organization_name);
+$.ajax({
 
-                  // The following code will add the JSON content returned by the API to the DOM
-                  var tr = $(&#39;&lt;tr/&gt;&#39;)
-                    .appendTo($(&#39;table&#39;));
-                  var td_1 = $(&#39;&lt;td/&gt;&#39;)
-                      .appendTo(tr);
-                  var td_2 = $(&#39;&lt;td/&gt;&#39;)
-                      .appendTo(tr);
-                  var aaa = $(&#39;&lt;a/&gt;&#39;)
-                    .attr(&#39;href&#39;,job.url)
-                    .attr(&#39;target&#39;,&#39;_blank&#39;)
-                    .addClass(&#39;job_title&#39;)
-                    .text(job.position_title)
-                    .append(&#39;&lt;br /&gt;&#39;)
-                    .appendTo(td_1);
-                  var employer = $(&#39;&lt;span/&gt;&#39;)
-                      .addClass(&#39;employer&#39;)
-                      .text(job.organization_name)
-                      .appendTo(td_1);
-                  var span_state= $(&#39;&lt;span/&gt;&#39;)
-                      .addClass(&#39;state&#39;)
-                      .text(job.locations[0])
-                      .appendTo(td_2);
-                  });
-                },
+    url:"http://api.usa.gov/jobs/search.json?query=tech+jobs",
+    type: "GET",
+    dataType: "jsonp",
 
-                 error: function() {
-                    return console.log(&quot;Failed&quot;);
-                    }
-            });
-</pre></div>
+    success: function(data){
+      $.each(data, function(index, job){
+        // Those are for debugging purpose
+        console.log(job.position_title);
+        console.log(job.url)
+        console.log(job.locations[0]);
+        console.log(job.organization_name);
+
+      // The following code will add the JSON content returned by the API to the DOM
+      var tr = $('<tr/>')
+        .appendTo($('table'));
+      var td_1 = $('<td/>')
+          .appendTo(tr);
+      var td_2 = $('<td/>')
+          .appendTo(tr);
+      var aaa = $('<a/>')
+        .attr('href',job.url)
+        .attr('target','_blank')
+        .addClass('job_title')
+        .text(job.position_title)
+        .append('<br />')
+        .appendTo(td_1);
+      var employer = $('<span/>')
+          .addClass('employer')
+          .text(job.organization_name)
+          .appendTo(td_1);
+      var span_state= $('<span/>')
+          .addClass('state')
+          .text(job.locations[0])
+          .appendTo(td_2);
+      });
+    },
+
+     error: function() {
+        return console.log("Failed");
+        }
+});
+
+});
+</code></pre>
+
+	          
+	          
+	          
+	          <div class="well">
+	            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "joejeanblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> 
+
+	          </div>
+	 </div>
 
 
-<p>});
-</code></pre></p>
-          
-          
-          <!-- the comment box -->
-          <div class="well">
-            
-			
-				<div class="comments">
 
-				  <div id="disqus_thread"></div>
-				  <script type="text/javascript">
-					var disqus_identifier = "articles/playing-with-an-open-api/";
-					var disqus_url = "https://www.joejean.net/articles/playing-with-an-open-api/";
-					(function() {
-					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-					dsq.src = 'https://joejeanblog.disqus.com/embed.js';
-					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-					})();
-				  </script>
-				</div>
-            
-          </div>
-          
-          
-
-        </div>
-		
 
 
 
@@ -188,45 +219,28 @@ $(document).ready(function(){</p>
                 </p>
 				<p class="text-center center-block"> &copy; 2014-<span id="current_year"></span>
                   
-                <!-- <span class="pull-right">
-
-                            <i class="fa fa-rss"></i> <a href="https://www.joejean.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">Atom feed</a>
-                </span> -->
+				
 				</p>
 				<br >
 			  </div>
 			</div>
 		</footer>
+	</div>
 
-    <script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-46696882-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
-	  ga('create', 'UA-46696882-1', 'joejean.info');
-	  ga('send', 'pageview');
-
-	</script>
-
-  <script type="text/javascript">
-    <!-- /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */ -->
-    var disqus_shortname = 'joejeanblog'; // required: replace example with your forum shortname
-
-    <!-- /* * * DON'T EDIT BELOW THIS LINE * * */ -->
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
-    
-	</div><!-- /.container -->
-
-
-		<!-- AddThis Smart Layers BEGIN -->
-		<!-- Go to www.addthis.com/dashboard to customize your tools --> 
+		
+		 
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58bed897fcf4597c"></script> 
 		<script type="text/javascript">
 		  addthis.layers({
@@ -237,15 +251,15 @@ $(document).ready(function(){</p>
 			}
 		  });
 		</script>
-		<!-- AddThis Smart Layers END -->
+		
 
 
-	<!-- JavaScript -->
-    <script src="https://www.joejean.net/theme/js/jquery-1.10.2.min.js"></script>
-    <script src="https://www.joejean.net/theme/js/bootstrap.min.js"></script>
+	
+    <script src="https://www.joejean.net/js/jquery-1.10.2.min.js"></script>
+    <script src="https://www.joejean.net/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
-    <!-- <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script> -->
+    
 	<script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript">
         $('#current_year').text((new Date()).getFullYear());
