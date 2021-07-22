@@ -11,10 +11,11 @@ name = "Resume"
 url = "https://docs.google.com/viewer?url=https://docs.google.com/document/d/110bYaCfIH5-7m2DSz8FvXWAk8HcA9fNIkYvvQl0fLXE/export?format=pdf"
 weight = 4
 [[menu.main]]
-name = "Projects"
-pre = "<i class='fa fa-road'></i>"
-url = "/projects/"
-weight = 3
+# Remove projects from the menu for now
+# name = "Projects"
+# pre = "<i class='fa fa-road'></i>"
+# url = "/projects/"
+# weight = 3
 [[menu.main]]
 name = "About"
 pre = "<i class='fa fa-heart'></i>"
