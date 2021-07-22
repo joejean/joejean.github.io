@@ -1,7 +1,7 @@
 ## My Personal Website
 It is built with the static site generator [Hugo](https://gohugo.io/).
 
-It is hosted on github pages. It is served from the gh-pages of this [repo](https://github.com/joejean/joejean.github.io). 
+It is hosted on github pages and served from the [gh-pages](https://github.com/joejean/joejean.github.io/tree/gh-pages) of this repo.
 
 ### Publishing workflow
 1- Make sure Hugo [is installed](https://gohugo.io/getting-started/installing/) on the computer
