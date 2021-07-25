@@ -6,7 +6,7 @@ description: About Joe Jean — Software Engineer and Tech Enthusiast
 
 <img src ="/images/joejean.jpg" class="img-responsive img-rounded" />
 
-My name is Joe Jean. I have a Bachelor of Science degree in Computer Science from [New York University in Abu Dhabi](http://www.nyuad.nyu.edu). And I currently work at [noon](https://noon.com) as a Senior Software Engineer in Dubai. I live with my beautiful wife and my son. I love building software that make people's lives easier. 
+My name is Joe Jean. I have a Bachelor of Science degree in Computer Science from [New York University in Abu Dhabi](http://www.nyuad.nyu.edu). I currently live in Dubai where I work as a Senior Software Engineer(at [noon](https://noon.com)) and live with my beautiful wife and a handsome son. I love building software that make people's lives easier. 
 
 ### Technology and I
 
