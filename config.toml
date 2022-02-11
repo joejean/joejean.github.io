@@ -1,7 +1,7 @@
 baseURL = "https://www.joejean.net"
 buildDrafts = false
 disqusShortname = "joejeanblog"
-googleAnalytics = "UA-46696882-1"
+googleAnalytics = "G-H0C04CTPTM"
 languageCode = "en-us"
 paginate = 6
 theme = "joe-blog"
